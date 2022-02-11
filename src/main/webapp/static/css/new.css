@@ -1,0 +1,58 @@
+.item>div>img{
+    height: 400px!important;
+    margin: 15px auto;
+}
+.item>div{
+    float: left;
+    text-align: center;
+}
+.item-text{
+    padding: 150px 0;
+}
+#myCarousel{
+    margin-top: 5px;
+    background: #eee;
+}
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
+.carousel-indicators{
+    position: relative;
+    bottom: 0;
+}
+.carousel-indicators li{
+    border: 1px solid #646;
+}
+.carousel-indicators li.active{
+    background: #646;
+}
+.carousel-indicators li {
+    width: 20px;
+    height: 12px;
+    background: white;
+}
+.carousel-indicators li.active {
+    margin: 1px;
+}
+.initial-chevron-right, .initial-chevron-left{
+    color: black;
+    opacity: 0;
+}
+.initial-chevron-right{
+    right: 0!important;
+    transition: opacity 1s, right 1s;
+}
+.initial-chevron-left{
+    left: 0!important;
+    transition: opacity 1s, left 1s;
+}
+.final-chevron-right{
+    right: 50%!important;
+    opacity: 1;
+    transition: opacity 1s, right 1s;
+}
+.final-chevron-left{
+    left: 50%!important;
+    opacity: 1;
+    transition: opacity 1s, left 1s;
+}

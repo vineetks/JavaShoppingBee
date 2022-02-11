@@ -1,0 +1,186 @@
+<!-- Vineet Kumar Singh :: Case Study -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Bee</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Shopping Bee :: Online shopping store" name="description">
+	<meta content="Shopping Bee, Online Shopping" name="keywords">
+	<meta name="theme-color" content="#131317">
+	<link rel="icon" type="img/jpg" href="../assets/images/shopping-bee-logo.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/shoppingbee.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Coustard">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/shoppingbee.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/cart.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="container-fluid text-center header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+					<img src="../assets/images/shopping-bee.jpg" alt="Shopping Bee Logo">
+				</div>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-modified"  id="navigation"> 
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav modified-navbar1">
+                <li><img src="../assets/images/shopping-bee-logo.jpg" alt="Shopping Bee Logo" style="height: 48px;float: left"/></li> 
+				<li><a class="navbar-brand webpage-title" href="index.html">Shopping Bee</a></li>
+            </ul>
+            <div class="col-xs-12 col-sm-6 col-md-6 modified-search">
+                <input class="form-control" type="text" placeholder="Search from a variety of products" id="search">
+                <div id="searchResults"></div>
+            </div>
+            <div id="rightNav">
+            	<div id="loggedOut">
+                		<a href="login.html"><span class="glyphicon glyphicon-user"></span> Login</a>
+                </div>
+                <div class="dropdown" id="loggedIn">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="glyphicon glyphicon-user"></span><span id="greetingText"></span>
+                    </a>
+					<ul class="dropdown-menu">
+                        <li><a href="account.html?entry=Details"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+                        <li><a href="account.html?entry=AddressBook"><span class="glyphicon glyphicon-envelope"></span> Address Book</a></li>
+                        <li><a href="account.html?entry=Orders"><span class="glyphicon glyphicon-list-alt"></span> Orders</a></li>
+                        <li><a href="account.html?entry=Wishlist"><span class="glyphicon glyphicon-gift"></span> Wishlist</a></li>
+                        <li id="adminPage"></li>
+                        <li><a href="http://localhost:8080/shoppingbee/logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+                    </ul>
+                 </div>
+                 <div id="hoverCart">
+                 		<span class="glyphicon glyphicon-shopping-cart glyphicon-cart-modified"></span><span id="cart-counter">1</span>
+                        <div class="hover-cart">
+                            <div class="col-sm-12" class="cartError"></div>
+                            <table class="table table-bordered table-striped modified-table text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Product</th>
+                                        <th class="text-center">Product Details</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-center">Total Price</th>
+                                        <th class="text-center">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="cart-content">
+                                </tbody>
+                            </table>
+                        </div>
+                  </div>
+            </div>
+        </div>
+        <div id="product-nav" class="container-fluid">
+            <div>
+                <div class="container">
+                    <ul class="row nav nav-justified text-center content-navbar collapse navbar-collapse" id="myNavbar1">
+                            <li class="active"><a href="index.html">HOME</a></li>
+                            <li><a href="electronics.html">ELECTRONICS</a></li>
+                            <li><a href="books.html">BOOKS</a></li>
+                            <li><a href="sports.html">SPORTS</a></li>
+                            <li><a href="clothing.html">CLOTHING</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid modified-container-fluid">
+        <div id="myCarousel" class="row carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="item-image col-xs-12 col-sm-6"><img src="../assets/images/books/book-2.jpg" alt="Chania"></div>
+                        <div class="item-text  col-xs-12 col-sm-6">
+                            <h3>Book</h3>
+                            <p>Tell Me Your Dreams by Sidney SHeldon<br>Price: Rs. 1999</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-image col-xs-12 col-sm-6"><img src="../assets/images/clothing/shirt-1.jpg" alt="Chania"></div>
+                        <div class="item-text col-xs-12 col-sm-6">
+                            <h3>Shirt</h3>
+                            <p>LEE - Solid Purple Shirt<br>Price: Rs. 499</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-image col-xs-12 col-sm-6"><img src="../assets/images/electronics/laptop-3.jpg" alt="Flower"></div>
+                        <div class="item-text col-xs-12 col-sm-6">
+                            <h3>Laptop</h3>
+                            <p>Dell- Inspiron 15R<br>Price: Rs. 26000</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-image col-xs-12 col-sm-6"><img src="../assets/images/sports/shoes-3.jpg" alt="Flower"></div>
+                        <div class="item-text col-xs-12 col-sm-6">
+                            <h3>Shoes</h3>
+                            <p>Adidas - Crazylight Boost <br>Price: Rs. 1199</p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="item-image col-xs-12 col-sm-6"><img src="../assets/images/electronics/mobile-6.jpg" alt="Flower"></div>
+                        <div class="item-text col-xs-12 col-sm-6">
+                            <h3>Mobile - Xiaomi</h3>
+                            <p>Redmi Note 3<br>Price: Rs. 11999</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left initial-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right initial-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+        </div>
+        
+        <div id="content" class="container">
+            <div class="addCartMessage"></div>
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-md-3">
+                	<div class="panel panel-default">        
+	                     <div class="panel-heading modified-panel-heading">
+	                          <h4 class="panel-title">Home</h4>
+	                     </div>
+	                     <div class="panel-body" style="padding:0">
+                    		<div class="filter-category">
+                   			</div>
+                   		</div>
+                   	</div>
+                </div>
+                <div class="col-md-9 product-items">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer text-left">
+    </div>
+</body>
+</html>

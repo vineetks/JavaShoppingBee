@@ -1,0 +1,31 @@
+Everything except headers and footers is dnamically loaded fropm database
+Authorities of guest, user and admin is separate. 
+Guest can only visit the website.
+User can visit and use the cart and order system and set his profile
+Admin can do almost everything and has access to admin page
+
+Filters and filtered products are dynamically loaded(not hardcoded)
+You can also serach a particular product from the search bar
+Product can be added tp cart from product detail page or the home pages.
+
+User Facilities:
+	can view his profile and edit it
+	view his previous orders and wishlist
+	views his added addresses and add new address from address  page or cart page
+	add to cart, remove from cart, increase or decrease
+	place order
+	choose payment methods
+
+Admin Facilities
+	admin can do anything user can
+	can add new products
+	view all users
+	view all addresses
+	view all orders placed
+
+Anyone with fresh email can signup
+	availaibility of email is shown quickly 
+	password is double checked
+
+ 
+Carousal on home page

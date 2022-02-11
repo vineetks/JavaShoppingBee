@@ -1,0 +1,554 @@
+/******************Vineet Kumar Singh :: Case Study*****************/
+body{
+    position: relative;
+}
+a:hover{
+    text-decoration: none;
+    color: brown;
+    cursor: pointer;
+}
+.remove-order{
+	position: absolute;
+    right: 28px;
+    font-size: 24px;
+    padding: 8px;
+    color: brown;
+    cursor: pointer;
+}
+#accessDenied{
+    width:40%;
+    margin: 0 auto;
+    display: block;
+}
+/***************************TOP NAVBAR******************************/
+#greetingText{
+    padding-right: 15px;
+}
+.navbar-modified{
+    border-radius: 0;
+    margin-bottom: 0;
+    border-width: 1px 0;
+    border-color: #b5b5b5;
+    font-family: Coustard;
+}
+#searchResults{
+    position: absolute;
+    width: 100%;
+    background: #eaeaea;
+    z-index: 100;
+    display: none;
+    font-family: verdana;
+}
+#searchResults li{
+    border: 1px solid #ccc;
+    border-top-width: 0px;
+}
+#searchResults li a:hover{
+    background: white;
+}
+.affix ~ div {
+    position: relative;
+    top: 92px;
+}
+.affix {
+    top:0;
+    width: 100%;
+    z-index: 1020 !important;
+}
+#rightNav{
+    position: absolute; 
+    top: 0; 
+    right: 0;
+}
+#hoverCart{
+	float:right
+}
+#loggedIn, #loggedOut{
+	float:left;
+	padding: 12px 0;
+	font-size: 18px;
+}
+#loggedIn .dropdown-menu{
+	right:0;
+	left: inherit;
+	padding:0;
+	top: inherit;
+}
+.dropdown-menu>li>a{
+	padding: 4px 20px;
+}
+.dropdown-menu>li>a:hover {
+    background: #646;
+    color: white;
+}
+/***************************CONTENT CONTAINER******************************/
+#content{
+    min-height: 400px;
+    font-family: verdana;
+}
+.modified-container-fluid{
+    background: #e1e1e1;
+    padding-bottom: 20px;
+}
+/************************FOOTER SECTION*****************************/
+.footer{
+    background: #efefef;
+    font-family: verdana;
+}
+.footer .container-fluid{
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+}
+.footer-category{
+	border-right: 1px solid #ccc;
+}
+.footer-category:last-child{
+	border-width:0;
+}
+.footer-links{
+	border: 1px solid #ccc;
+    border-width: 0 1px;
+}
+.row.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-links h4{
+    margin-bottom: 3px;
+}
+.footer a{
+    color: #6f6f6f;
+}
+.footer a:hover{
+    color: brown;
+}
+.footer-updated{
+    float:right;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+}
+/****************************HEADER******************************/
+.header-top img{
+	max-height: 125px;
+}
+.login-status{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    padding: 10px;
+    font-family: Coustard;
+}
+#userSpan{
+    padding: 0 10px;
+}
+.active-product-list, .active-product-list:hover{
+    background: rgba(0,0,0,0.8)!important;
+    color: white!important;;
+}
+.nav-stacked>li+li {
+    margin-top: 0;
+}
+.table-cell{
+    display:table-cell!important;
+    background: #eee;
+    z-index: 100;
+}
+.product-list ul{
+    list-style: none;
+}
+.product-sub-list{
+    display: none;
+    background: rgba(0,0,0,0.7);
+}
+.product-sub-list>li>a{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.product-sub-list>li{
+    position: relative;
+}
+.product-sub-list>li>a:hover{
+    background: rgba(0,0,0,0.3);
+}
+#collapse0{
+    display: block;
+}
+.individual-item{
+	position: relative;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.individual-item:hover{
+    background: white;
+    transform: translate3d(0, -2px, 0);
+    transition: box-shadow 0.25s, transform 0.25s;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+}
+.panel-default .modified-panel-heading, .modified-modal-header{
+    background: #646;
+    color: white;
+    border-bottom:0;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.glyphicon-heart, .glyphicon-heart-empty{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: red;
+}
+/************************PRODUCT NAVIGATION SECTION**************************/
+#product-nav{
+    margin-top: 0;
+    background: rgba(0,0,0,0.4)
+}
+#product-nav .row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+#product-nav ul{
+    background: transparent;
+}
+#product-nav a{
+    color: black!important;
+}
+
+#product-nav .active>a {
+    color: #fff!important;
+    background-color: #646;
+}
+#product-nav li:not(.active) a:hover{
+    background-color: #aaa; 
+    color: black;
+}
+#product-nav .active>a::after{
+    content: " ";
+    top: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #646 transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+}
+#search{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px 6px 40px;
+    font-family: “Courier new”, Courier, “Andale Mono”;
+    background: url("../assets/images/search.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+}
+.modified-search{
+    padding: 8px 0;
+}
+/************************PRODUCT DETAIL PAGE**************************/
+.cart-content>tr td{
+    vertical-align: middle!important;
+}
+.cart-glyphicon{
+    font-size: 14px;
+    padding: 5px;
+}
+.product-row{
+    padding: 20px 0;
+}
+.btn-modified{
+    font-size: 14px!important;
+    color: white!important;
+}
+.go-to-cart button{
+    float: right;
+    margin-right: -15px;
+}
+.product-image{
+	height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+.product-specs{
+    margin: 10px 0;
+}
+.product-details{
+    background: #f0f0f0;
+}
+/****************************CART PAGE*******************************/
+.quantity{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid#ccc;
+}
+.addCartMessage{
+    margin-right: -15px;
+    padding-top: 10px;
+}
+.modified-table{
+    background: white;
+}
+.modified-table th{
+    border-bottom-width: 1px!important;
+}
+.modified-table>thead{
+    background: #646;
+    color: white;
+}
+#cart-counter{
+    position: absolute;
+    padding: 0px 10px;
+    top: 3px;
+    right: 5px;
+    border-radius: 50%;
+    padding-top: 5px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: none;
+}
+.hover-cart{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-family: serif;
+    display: none;
+    opacity: 0;
+    z-index: 1000;
+}
+.hover-cart-displayed{
+    display: block;
+    min-width: 700px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+#loginAlert{
+    top: 200px;
+    position: fixed;
+}
+.modal-backdrop{
+    position: fixed!important;
+    top: 0!important;
+}
+#applyCoupon{
+    float: left;
+    width: 60%;
+    margin: 0 15px; 
+}
+#applyCouponBtn{
+    float: left;
+}
+.cartTotal{
+    float: left;
+    text-align: right;
+    padding: 0 10px;
+}
+.cartTotalValues{
+    float: left;
+    text-align: left;
+    padding: 0 10px;
+}
+.order-panel{
+	margin-bottom: 5px;
+}
+.order-panel>.panel-heading{
+	font-size: 20px;
+}
+.active-list-item{
+	border-left: 5px solid #646;
+	font-weight: 600;
+}
+.active-panel-heading{
+	background: #eee;
+}
+/****************************ADMIN PAGE******************************/
+.active-link{
+    border-left: 5px solid #646;
+}
+.admin-links>ul{
+    display:none;
+    list-style-type: none;
+    padding-top:5px;
+}
+.admin-div, .add-product{
+    margin:0 15px;
+}
+.btn-right{
+    float: right;
+}
+#specInput{
+    display:none;
+}
+.goToOrders{
+	color: white!important;
+}
+/****************************LOGIN PAGE*******************************/
+.control-label-signup{
+    color: white;
+}
+.modified-container{
+    background: url("../assets/images/bg3.jpg");
+    width: 100%;
+    background-size: cover;
+}
+.login-container{
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    min-height: 100%;
+    margin-left: 0px;
+}
+.login-content{
+    margin: auto 35%;
+    margin-top: 150px;
+    background: rgba(0,0,0,0.5);
+    border-width: 0;  
+}
+.signup-content{
+	margin: 150px 20% auto;
+}
+.login-content .panel-heading,.login-content .panel-footer{
+    background: rgba(0,0,0,0.5);
+    border-width: 0;
+    color: white;
+}
+.modified-panel-body {
+    padding: 40px 15px;
+}
+.remember-me{
+    float: left;
+    color: white;
+    font-weight: 400;
+}
+.remember-me input{
+    vertical-align: top;
+}
+.modified-exclamation{
+    color: red;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    padding: 5px;
+    display: none;
+    z-index: 1000;
+}
+#loginSubmit, #signupSubmit{
+    font-weight: 600;
+    color: black;
+    float: right;
+}
+/****************************PRODUCT ITEMS***************************/
+.product-item-container, .account-details, .admin-container{
+    padding: 15px 0;
+    margin-bottom: 10px;
+    background: #eee;
+}
+.product-item-container>div{
+	min-height: 300px;
+}
+.product-items a{
+    color: black;
+}
+.product-items a:hover{
+    color: brown;
+    border-bottom: 1px dotted;
+}
+
+/*************************MODIFIED GLYPHICONS*************************/
+.modified-glyphicon-lock{
+    font-size: 32px;
+    float: right;
+    color: #ccc;
+}
+.glyphicon-chevron-modified{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    padding: 8px;
+    color: white;
+    display: none;
+}
+.glyphicon-modified{
+    float: right;
+}
+.glyphicon-cart-modified{
+    font-size: 30px;
+    padding: 10px 15px;
+    color: black;
+}
+.glyphicon-cart-modified:hover{
+    cursor: pointer;
+}
+/***************************ACCOUNT PAGE*******************************/
+.panel-body-address{
+    min-height: 180px;
+}
+.new-entity{
+    width:80px; 
+    height:80px; 
+    border-radius:50%; 
+    border:1px dotted rebeccapurple; 
+    margin: 30px auto;
+    cursor: pointer;
+    color: rebeccapurple;
+}
+.active-link{
+    border-left: 5px solid #646;
+}
+.Details-link>ul{
+    display:none;
+    list-style-type: none;
+    padding-top:5px;
+}
+/****************************MEDIA QUERY*******************************/
+@media only screen and (max-width: 767px) {
+	#rightNav{
+    right: 100px;
+	}
+    .modified-navbar{
+        margin: 8px 0 0;
+    }
+    .affix ~ div {
+        top: 117px;
+    }
+    #product-nav{
+        padding: 0;
+        width: 100%;
+    }
+    #product-nav ul{
+        margin: 0;
+    }
+    #product-nav li a{
+        border-radius: 0;  
+    }
+    #navigation{
+        margin-bottom: 0;
+    }
+    .fixed-product-nav{
+        position: fixed!important;
+        top: 116px;
+        z-index: 1000;
+        margin-top: 0px!important;
+        margin-left: -15px!important;
+        transition: margin-left 0.75s, margin-top 0.75s;
+    }
+    #myNavbar{ 
+        right:175px;
+    }
+    .login-content{
+        margin: auto 20%;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .login-content{
+        margin: auto 25%;
+    }
+}

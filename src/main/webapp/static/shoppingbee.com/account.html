@@ -1,0 +1,199 @@
+<!-- Vineet Kumar Singh :: Case Study -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Bee</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="Shopping Bee :: Online shopping store" name="description">
+	<meta content="Shopping Bee, Online Shopping" name="keywords">
+	<meta name="theme-color" content="#131317">
+	<link rel="icon" type="img/jpg" href="../assets/images/shopping-bee-logo.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/shoppingbee.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Coustard">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/shoppingbee.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/cart.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="container-fluid text-center header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+					<img src="../assets/images/shopping-bee.jpg" alt="Shopping Bee Logo">
+				</div>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-modified"  id="navigation"> 
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav modified-navbar1">
+                <li><img src="../assets/images/shopping-bee-logo.jpg" alt="Shopping Bee Logo" style="height: 48px;float: left"/></li> 
+				<li><a class="navbar-brand webpage-title" href="index.html">Shopping Bee</a></li>
+            </ul>
+            <div class="col-xs-12 col-sm-6 col-md-6 modified-search">
+                <input class="form-control" type="text" placeholder="Search from a variety of products" id="search">
+                <div id="searchResults"></div>
+            </div>
+            <div id="rightNav">
+            	<div id="loggedOut">
+                		<a href="login.html"><span class="glyphicon glyphicon-user"></span> Login</a>
+                </div>
+                <div class="dropdown" id="loggedIn">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="glyphicon glyphicon-user"></span><span id="greetingText"></span>
+                    </a>
+					<ul class="dropdown-menu">
+                        <li><a href="account.html?entry=Details"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+                        <li><a href="account.html?entry=AddressBook"><span class="glyphicon glyphicon-envelope"></span> Address Book</a></li>
+                        <li><a href="account.html?entry=Orders"><span class="glyphicon glyphicon-list-alt"></span> Orders</a></li>
+                        <li><a href="account.html?entry=Wishlist"><span class="glyphicon glyphicon-gift"></span> Wishlist</a></li>
+                        <li id="adminPage"></li>
+                        <li><a href="http://localhost:8080/shoppingbee/logout"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+                    </ul>
+                 </div>
+                 <div id="hoverCart">
+                 		<span class="glyphicon glyphicon-shopping-cart glyphicon-cart-modified"></span><span id="cart-counter">1</span>
+                        <div class="hover-cart">
+                            <div class="col-sm-12" class="cartError"></div>
+                            <table class="table table-bordered table-striped modified-table text-center">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Product</th>
+                                        <th class="text-center">Product Details</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-center">Total Price</th>
+                                        <th class="text-center">Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="cart-content">
+                                </tbody>
+                            </table>
+                        </div>
+                  </div>
+            </div>
+        </div>
+        <div id="product-nav" class="container-fluid">
+            <div>
+                <div class="container">
+                    <ul class="row nav nav-justified text-center content-navbar collapse navbar-collapse" id="myNavbar1">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="electronics.html">ELECTRONICS</a></li>
+                            <li><a href="books.html">BOOKS</a></li>
+                            <li><a href="sports.html">SPORTS</a></li>
+                            <li><a href="clothing.html">CLOTHING</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid modified-container-fluid"> 
+		<div id="content" class="container">
+	    	<div class="row" style="padding: 20px 0;">
+	        	<div class="col-md-3">
+	            	<div class="list-group" style="font-size:16px">
+	                    <div class="list-group-item Details-link">
+		                	<a href="account.html?entry=Details"><span class="glyphicon glyphicon-user"></span> My Profile</a>
+							<ul>
+								<li id="editProfile"><a>Edit Profile</a></li>
+								<li>Change password</li>
+							</ul>
+	                    </div>
+  							<a href="account.html?entry=AddressBook" class="list-group-item AddressBook-link">
+  								<span class="glyphicon glyphicon-envelope"></span> Address Book
+  							</a>
+							<a href="account.html?entry=Orders" class="list-group-item Orders-link">
+								<span class="glyphicon glyphicon-list-alt"></span> My Orders
+							</a>
+							<a href="account.html?entry=Wishlist" class="list-group-item Wishlist-link">
+								<span class="glyphicon glyphicon-gift"></span> My Wishlist
+							</a>
+					</div>
+				</div>
+	            <div class="col-md-9">
+					<div class="account-details row" id="userDetails">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+	    						0% Complete
+	  						</div>
+						</div>
+						<form class="form-horizontal" id="updateProfileForm" action="http://localhost:8080/shoppingbee/current/update" method="post">
+							<div class="col-sm-8">
+								<div class="form-group">
+							    	<label class="control-label col-sm-4" for="name">Name:</label>
+							      	<div class="col-sm-8">
+							        	<input type="text" class="form-control input-disabled" name="name" id="name" placeholder="Enter Name" disabled>
+							      	</div>
+							    </div>
+							    <div class="form-group">
+							      	<label class="control-label col-sm-4" for="email">Email:</label>
+							      	<div class="col-sm-8">
+							        	<input type="email" class="form-control input-disabled" name="email" id="email" placeholder="Enter email" disabled>
+							      	</div>
+							    </div>
+							    <div class="form-group">
+							      	<label class="control-label col-sm-4" for="userId">UserId:</label>
+							      	<div class="col-sm-8">
+							        	<input type="text" class="form-control" id="userId" name="userId" disabled>
+							      	</div>
+							    </div>
+							    <div class="form-group">
+							      	<label class="control-label col-sm-4" for="username">Username:</label>
+							      	<div class="col-sm-8">
+							        	<input type="text" class="form-control" id="username" name="username" disabled>
+							      	</div>
+							    </div>
+							    <div class="form-group">
+							      	<label class="control-label col-sm-4" for="mobileNo">Mobile No:</label>
+							      	<div class="col-sm-8">
+							        	<input type="text" class="form-control input-disabled" id="mobileNo" name="mobileNo" placeholder="Enter Mobile No." disabled>
+							      	</div>
+							    </div>
+							    <div class="form-group">
+							      	<label class="control-label col-sm-4" for="joinedDate">Date Of Joining:</label>
+							      	<div class="col-sm-8">
+							        	<input type="text" class="form-control" name="joinedDate" id="joinedDate" disabled>
+							      	</div>
+							    </div>
+						    </div>
+						    <div class="col-sm-4">
+								<img id="profilePic" src="" class="img-thumbnail" alt="" style="max-height:190px">'
+							</div>
+							<div style="clear:both"></div>
+						    <div class="form-group">        
+						      <div class="col-sm-offset-8">
+						        <button type="submit" class="btn btn-default input-disabled"  id="updateProfile" disabled>Submit</button>
+						      </div>
+						    </div>
+						</form>
+					</div>
+					<div class="account-details row" id="userAddressBook">
+						<div class="col-sm-4"><div class="panel panel-default">
+	  						<div class="panel-heading" id="addressType"><b>Add New Address</b></div>
+	  						<div class="panel-body panel-body-address">
+	  							<div class="new-entity">
+	  								<span class="glyphicon glyphicon-plus" style="font-size: 20px;left: 30px;top: 30px;"></span>
+	  							</div>
+	  							<div class="newAddressDiv"></div>
+	  						</div>
+	  					</div></div>
+					</div>
+					<div class="account-details row" id="userOrders"></div>
+					<div class="account-details row" id="userWishlist"></div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer text-left"></div>
+</body>
+</html>
